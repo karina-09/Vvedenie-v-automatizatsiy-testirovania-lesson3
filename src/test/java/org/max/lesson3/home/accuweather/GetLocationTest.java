@@ -33,6 +33,7 @@ public class GetLocationTest extends AccuweatherAbstractTest {
                 .extract()
                 .body().jsonPath().getList(".", Location.class);
 
+        //тут возвращается результат из 2х вариантов, а не 24
         Assertions.assertEquals(24, response.size());
         Assertions.assertEquals("Minsk", response.get(0).getEnglishName());
 
