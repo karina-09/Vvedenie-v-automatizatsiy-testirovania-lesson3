@@ -29,6 +29,7 @@ public class GetWeatherOneDayTest extends AccuweatherAbstractTest {
                 .time(Matchers.lessThan(2000l))
                 .extract()
                 .response()
+            //тут надо поправить классы Night.java и Day.java
                 .body().as(Weather.class);
 
         Assertions.assertEquals(1,response.getDailyForecasts().size());
